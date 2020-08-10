@@ -29,5 +29,6 @@ Route::get('first', function ()
     return View::make('user.users');
 });
 
-Route::resource('/reviews','ReviewController@show');
+Route::resource('/show','ReviewController@show');
+Route::resource('/showall','ReviewController@showall');
 Route::resource('/create','ReviewController@create');
