@@ -74,8 +74,9 @@ class ReviewController extends \BaseController {
             $arrayName;
             foreach ($reviews as $review) 
             {
-                  $arrayName['page'.$i][] = array(
-				'id' => $review->id,
+                  $arrayName[$i][] = array(
+                        'id' => $review->id,
+                        'discript' => $review->discript,
 				'name' => $review->name,
 				'raiting' => $review->raiting,
 				'mainphoto' => $review->photos
@@ -85,7 +86,6 @@ class ReviewController extends \BaseController {
                   {
 				$i++;
 				$j = 0;
-
 			}
             }
             return Response::json(array(

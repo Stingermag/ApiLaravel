@@ -13,7 +13,7 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return View::make('user.users');
 });
 Route::get('transaction', function () 
 {
@@ -24,11 +24,11 @@ Route::get('read', function ()
     return View::make('read');
 });
 
-Route::get('first', function () 
+Route::get('users', function () 
 {
     return View::make('user.users');
 });
 
-Route::resource('/show','ReviewController@show');
+Route::resource('/shows','ReviewController@show');
 Route::resource('/showall','ReviewController@showall');
 Route::resource('/create','ReviewController@create');
